@@ -1,0 +1,29 @@
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls"> 
+    <div class="slides"></div> 
+    
+    <h3 class="title"></h3> 
+    <a class="prev">‹</a> 
+    <a class="next">›</a> 
+    <a class="close">×</a> 
+    <ol class="indicator"> 
+    </ol> 
+    <ul class="indicator"> 
+        <li ng-repeat="slide in slides" title="{{slide.title}}" data-index="{{$index}}" ng-click="setActiveSlide($index)">
+            <div class="slide-selector" ng-class="{'selected': slide.selected}" ng-click="selectSlide($index)" stop-event='click'>
+                <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+        </li>      
+    </ul>
+    <div class="controls">
+        <div class="btn-group pull-right" role="group" aria-label="...">
+            <button type="button" class="btn btn-default select-all" ng-click="selectAll()"><i class='fa fa-check' aria-hidden='true'></i> All</button>
+            <button type="button" class="btn btn-default" ng-click="downloadSelected()"><i class="fa fa-cloud-download" aria-hidden="true"></i></button>
+        </div>
+    </div>
+</div> 
+<div id="links" class="links blueimp-gallery-inner">
+    <a ng-repeat="slide in slides" href="{{slide.href}}" title="{{slide.title}}" data-index="{{$index}}">
+        <img ng-src="{{slide.thumb}}" alt="{{slide.title}}">  
+    </a>
+</div>
+
