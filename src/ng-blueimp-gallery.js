@@ -1,5 +1,8 @@
 (function () {
     'use strict';
+    
+    angular.module('templates',[]);
+
     angular
         .module('ui.blueimp.gallery', ['templates'])
         .directive('uiGallery', uiGallery);
