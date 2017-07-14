@@ -23,6 +23,7 @@
         function link(scope, element, attr) {
             scope.slides = scope.list;
             scope.isSelectAll = false;
+            //scope.left = '100px';
 
             scope.$watch('list', function(newVal, oldVal){
                 scope.slides = newVal;
@@ -75,7 +76,14 @@
                     links = this.getElementsByTagName('a');
 
                 angular.extend(options, scope.options);
-
+                
+                /*
+                options.onslide = function(index, slide){
+                    scope.left = ((-1 * index) * (100 + 6 + 2.4)) + 'px';
+                    scope.$apply();
+                };
+                */
+                
                 if(blueimp){
                     scope.gallery = blueimp.Gallery(links, options);
                 }else{

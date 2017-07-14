@@ -46,3 +46,41 @@
     width:100px;
     position: relative;
 }
+
+.blueimp-gallery.sm > .indicator {
+    overflow-y: hidden;
+    width: 999999px;
+    left: 40%;
+    text-align: left;
+}
+
+/*
+
+.blueimp-gallery.sm > .indicator > li,
+.blueimp-gallery.sm > ul.indicator > li {
+    height:15px;
+    width:30px;
+}
+
+.blueimp-gallery.sm > .indicator > li > div.slide-selector > i {
+    opacity: 0.75;
+    height:15px;
+    width:px;
+    color: rgba(0, 0, 0, 0.5);
+    background-color: white;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+.blueimp-gallery.sm > .indicator > li > div.slide-selector.selected > i {
+    opacity: 1;
+    height:15px;
+    width:15px;
+    color: rgba(255, 255, 255, 0.75);
+    background-color: green;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+}
+*/

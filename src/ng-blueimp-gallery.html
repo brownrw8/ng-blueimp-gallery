@@ -5,9 +5,9 @@
     <a class="prev">‹</a> 
     <a class="next">›</a> 
     <a class="close">×</a> 
-    <ol class="indicator"> 
+    <ol class="indicator" ng-style="{left:left}"> 
     </ol> 
-    <ul class="indicator"> 
+    <ul class="indicator" ng-style="{left:left}"> 
         <li ng-repeat="slide in slides" title="{{slide.title}}" data-index="{{$index}}" ng-click="setActiveSlide($index)">
             <div class="slide-selector" ng-class="{'selected': slide.selected}" ng-click="selectSlide($index)" stop-event='click'>
                 <i class="fa fa-check" aria-hidden="true"></i>

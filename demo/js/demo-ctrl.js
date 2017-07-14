@@ -8,7 +8,19 @@
     UiGalleryCtrl.$inject = ['$scope'];
 
     function UiGalleryCtrl($scope){
+        
+        $scope.list = [];
+        
+        for(var i=1;i<=10;i++){
+            $scope.list.push({
+              href: 'images/image1.jpg',
+              thumb: 'images/image1_thumb.jpg',
+              title: i + '.png',
+              selected: false
+            });
+        }
 
+    /*
         $scope.list = [
             {
               href: 'images/image1.jpg',
@@ -59,6 +71,7 @@
               selected: false
             }
         ];
+    */
         
         $scope.download = function(items){
             for(var i in items){
