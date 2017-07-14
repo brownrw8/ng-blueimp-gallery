@@ -24,6 +24,7 @@
 
 
         function link(scope, element, attr) {
+            scope.id = "blueimp-gallery-" +  Math.floor(Math.random() * 200) + Date.now();
             scope.slides = scope.list;
             scope.isSelectAll = false;
             //scope.left = '100px';
@@ -71,7 +72,7 @@
                 scope.onDownload()(items);
             };
 
-            angular.element("#links").on('click', function(event){
+            angular.element("#"+scope.id).on('click', function(event){
                 event = event || $window.event;
                 var target = event.target || event.srcElement,
                     link = target.src ? target.parentNode : target,
