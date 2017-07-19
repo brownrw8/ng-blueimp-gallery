@@ -9,12 +9,47 @@
 
     function UiGalleryCtrl($scope){
         
-        $scope.list = [];
+        $scope.list0 = [];
+        $scope.list1 = [];
+        $scope.list2 = [];
+        $scope.list3 = [];
+        $scope.list4 = [];
+        
+        for(var i=1;i<=5;i++){
+            $scope.list2.push({
+              href: 'images/image3.jpg',
+              thumb: 'images/image3_thumb.jpg',
+              title: i + '.png',
+              selected: false
+            });
+        }
         
         for(var i=1;i<=10;i++){
-            $scope.list.push({
+            $scope.list0.push({
               href: 'images/image1.jpg',
               thumb: 'images/image1_thumb.jpg',
+              title: i + '.png',
+              selected: false
+            });
+            $scope.list1.push({
+              href: 'images/image1.jpg',
+              thumb: 'images/image1_thumb.jpg',
+              title: i + '.png',
+              selected: false
+            });
+
+            $scope.list3.push({
+              href: 'images/image1.jpg',
+              thumb: 'images/image1_thumb.jpg',
+              title: i + '.png',
+              selected: false
+            });
+        }
+        
+        for(var i=1;i<=20;i++){
+            $scope.list4.push({
+              href: 'images/image2.jpg',
+              thumb: 'images/image2_thumb.jpg',
               title: i + '.png',
               selected: false
             });

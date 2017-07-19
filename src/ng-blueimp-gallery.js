@@ -14,7 +14,6 @@
         var directive = {
             template: $templateCache.get("src/ng-blueimp-gallery.html"),
             scope: {
-                options: '=',
                 list: '=',
                 onDownload: '&'
             },
@@ -27,8 +26,10 @@
             scope.id = "blueimp-gallery-" +  Math.floor(Math.random() * 200) + Date.now();
             scope.slides = scope.list;
             scope.isSelectAll = false;
+            
             //scope.left = '100px';
 
+            
             scope.$watch('list', function(newVal, oldVal){
                 scope.slides = newVal;
             });
@@ -72,14 +73,11 @@
                 scope.onDownload()(items);
             };
 
-            $("button.blueimp-trigger").on('click', function(event){
-                event = event || $window.event;
-                var target = event.target || event.srcElement,
-                    options = {index: 0, event: event},
-                    links = angular.element(this).parent().get(0).getElementsByTagName('a');
-                console.log(target,options,links);
-                angular.extend(options, scope.options);
-                
+            scope.view = function($event){
+                var target = $event.target || $event.srcElement,
+                    options = {index: 0, event: $event, container: '#'+scope.id},
+                    links = angular.element(target).parent().get(0).getElementsByTagName('a');
+               
                 /*
                 options.onslide = function(index, slide){
                     scope.left = ((-1 * index) * (100 + 6 + 2.4)) + 'px';
@@ -87,15 +85,13 @@
                 };
                 */
                 
-                options.container = '#'+scope.id;      
                 if(blueimp){
                     scope.gallery = blueimp.Gallery(links, options);
-                    
                 }else{
-                    console.log('Make sure you added blueimp-gallery.js file');
+                    console.log('Ensure you have included blueimp-gallery.js');
                 }
 
-            });
+            };
         }
     }
     
