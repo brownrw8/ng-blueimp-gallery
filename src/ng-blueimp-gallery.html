@@ -1,4 +1,4 @@
-<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls"> 
+<div id="{{id}}" class="blueimp-gallery blueimp-gallery-controls"> 
     <div class="slides"></div> 
     
     <h3 class="title"></h3> 
@@ -22,7 +22,7 @@
     </div>
 </div> 
 <div class="links blueimp-gallery-inner" >
-    <a ng-repeat="slide in slides" href="{{slide.href}}" title="{{slide.title}}" data-index="{{$index}}">
+    <a ng-repeat="slide in slides" href="{{slide.href}}" title="{{slide.title}}" data-index="{{$index}}" data-gallery="{{id}}">
         <img ng-src="{{slide.thumb}}" alt="{{slide.title}}">  
     </a>
     <button class="blueimp-trigger" type="button">View</button>

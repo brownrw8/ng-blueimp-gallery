@@ -87,6 +87,7 @@
                 };
                 */
                 
+                options.container = '#'+scope.id;      
                 if(blueimp){
                     scope.gallery = blueimp.Gallery(links, options);
                     
