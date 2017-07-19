@@ -72,13 +72,12 @@
                 scope.onDownload()(items);
             };
 
-            angular.element("#"+scope.id).on('click', function(event){
+            $("button.blueimp-trigger").on('click', function(event){
                 event = event || $window.event;
                 var target = event.target || event.srcElement,
-                    link = target.src ? target.parentNode : target,
-                    options = {index: link, event: event},
-                    links = this.getElementsByTagName('a');
-
+                    options = {index: 0, event: event},
+                    links = angular.element(this).parent().get(0).getElementsByTagName('a');
+                console.log(target,options,links);
                 angular.extend(options, scope.options);
                 
                 /*
@@ -90,6 +89,7 @@
                 
                 if(blueimp){
                     scope.gallery = blueimp.Gallery(links, options);
+                    
                 }else{
                     console.log('Make sure you added blueimp-gallery.js file');
                 }

@@ -1,6 +1,6 @@
 {
   "name": "ng-blueimp-downloader-gallery",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "license": "GNU GPL V3",
   "homepage": "https://github.com/brownrw8/ng-blueimp-gallery",
   "dependencies": {
