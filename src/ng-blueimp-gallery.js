@@ -25,6 +25,7 @@
         function link(scope, element, attr) {
             scope.id = "blueimp-gallery-" +  Math.floor(Math.random() * 200) + Date.now();
             scope.slides = scope.list;
+            scope.count = scope.list.length;
             scope.isSelectAll = false;
             
             //scope.left = '100px';

@@ -24,21 +24,8 @@
             });
         }
         
-        for(var i=1;i<=10;i++){
+        for(var i=1;i<=51;i++){
             $scope.list0.push({
-              href: 'images/image1.jpg',
-              thumb: 'images/image1_thumb.jpg',
-              title: i + '.png',
-              selected: false
-            });
-            $scope.list1.push({
-              href: 'images/image1.jpg',
-              thumb: 'images/image1_thumb.jpg',
-              title: i + '.png',
-              selected: false
-            });
-
-            $scope.list3.push({
               href: 'images/image1.jpg',
               thumb: 'images/image1_thumb.jpg',
               title: i + '.png',
@@ -46,7 +33,7 @@
             });
         }
         
-        for(var i=1;i<=20;i++){
+        for(var i=1;i<=501;i++){
             $scope.list4.push({
               href: 'images/image2.jpg',
               thumb: 'images/image2_thumb.jpg',

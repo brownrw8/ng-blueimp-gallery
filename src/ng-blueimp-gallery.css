@@ -65,19 +65,30 @@
     position: relative;
 }
 
+.blueimp-gallery.sm > .indicator > li,
+.blueimp-gallery.sm > ul.indicator > li {
+    height:50px;
+    width:50px;
+}
+
+.blueimp-gallery.xs > .indicator > li,
+.blueimp-gallery.xs > ul.indicator > li {
+    height:40px;
+    width:40px;
+}
+
+.blueimp-gallery.xxs > .indicator > li,
+.blueimp-gallery.xxs > ul.indicator > li {
+    height:30px;
+    width:30px;
+}
+
+/*
 .blueimp-gallery.sm > .indicator {
     overflow-y: hidden;
     width: 999999px;
     left: 40%;
     text-align: left;
-}
-
-/*
-
-.blueimp-gallery.sm > .indicator > li,
-.blueimp-gallery.sm > ul.indicator > li {
-    height:15px;
-    width:30px;
 }
 
 .blueimp-gallery.sm > .indicator > li > div.slide-selector > i {
